@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Manager</title>
+</head>
+<body>
+
+
+<h1>Productasos</h1>
+
+<table>
+    <tr>
+        <th>Product</th>
+        <th>Name</th>
+        <th>Brand</th>
+        <th>Made in</th>
+        <th>Price</th>
+        <th>Actions</th>
+    </tr>
+
+    <!--/*@thymesVar id="productList" type="aj"*/-->
+    <tr th:each="product : ${productList}">
+        <td th:text="${product.id}">Product Id</td>
+        <td th:text="${product.name}">Name</td>
+        <td th:text="${product.brand}">Brand</td>
+        <td th:text="${product.madein}">Made in</td>
+        <td th:text="${product.price}">Price</td>
+        <td>Eliminar</td>
+    </tr>
+
+</table>
+
+
+</body>
+</html>
